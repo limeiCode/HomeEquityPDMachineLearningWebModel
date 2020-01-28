@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home Equity Loan PD Machine Learning Model</title>
+
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+            crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="container" style="background-color:rgb(214, 179, 235)!important; color:purple">
+            <br>
+            <div class="row" >
+                <h1 style="margin-left:100px;font-weight: bold"> Welcom to Home Equity Loan PD Machine Learning Model </h1> 
+                <a style="margin-left:100px; font-size:xx-large;" href="/prediction">Model Prediction</a>   
+                <a style="margin-left:80px; font-size:xx-large;" href="/development">Model Introduction</a> 
+                <a style="margin-left:80px; font-size:xx-large;" href="/introduction">Model Development</a>         
+            </div> 
+            <br>
+            <div class="row">   
+                <img style="margin-left:30px;" class=" rounded-circle mx-auto" src="{{url_for('static', filename='images/img1.png')}}" alt="image" >	
+            </div>
+            <br><br><br>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    </body>
+
+</html>
