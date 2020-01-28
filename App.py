@@ -68,8 +68,10 @@ def predictioninput():
     #<input>  15 columns
     finalresult  = ""   
     msg = ""
+    form_data = {"delinquentcreditlinescount":""}
     # print(request.method)                                           # initialization here for return "" for GET
     if request.method =="POST":
+        form_data = request.form
         # 1)dummpy : dropdowns(cooupation, applyloanreason): selected=1 unselected=0  
         delinquentcreditlinescount = float(request.form["delinquentcreditlinescount"])  # is key not function form["inputdata2"] form("inputdata2")
         derogatoryreportscount = float(request.form["derogatoryreportscount"])  
@@ -153,8 +155,9 @@ def predictioninput():
         else:
             finalresult = "Not Default" 
 
-    print(msg)
-    return render_template("modelprediction.html", prediction = finalresult, msg=msg )
+    # print(msg)
+    # return render_template("modelprediction.html", prediction = finalresult, msg=msg )
+    return render_template("modelprediction.html", prediction = finalresult, msg=msg, form_data=form_data )
 
 # @app.route('/modeldevelopement/')
 # def prediction():                                          
