@@ -15,7 +15,7 @@ This project using **Python** language developed three **Machine Learning** mode
 
 The Home Equity Loan data is from  [**Home Equity Loan Dataset**](http://www.creditriskanalytics.net/datasets-private2.html).
 
-This data set reports characteristics and delinquency information for 5,960 home equity loans. 
+This data set reports `characteristics` and `delinquency` information for **5,960** home equity loans. 
 
 A home equity loan is a loan where the obligor uses the equity of his or her home as the underlying collateral. 
 
@@ -37,11 +37,11 @@ A home equity loan is a loan where the obligor uses the equity of his or her hom
 
 * **DevHomeEquityPDModel.ipynb**: This is the script for building the machine learning model.
 
-* **app.py**: It is the Flask Server which has two routes. The root route `/` that will show the landing page, the other route called `/prediction` that will prvoide the default prediction API.
+* **app.py**: It is the Flask Server which has two routes. The root route `/` that will show the landing page, the other route called `/predictonesample` that will prvoide the *DEFAULT* prediction API.
 
-* **index.html**: It is `Jinja` template HTML file structured by using `bootstrap`, it takes the prediction result string and displays all of the data in the appropriate HTML elements.
+* **index.html**: It is `Jinja` template HTML file structured by using `bootstrap`, it takes the prediction result string and displays the data in the appropriate HTML elements.
 
-* **modelprediction.html**: It is the page accept user's input and show the predictio result.
+* **modelprediction.html**: It is the page accept users' input *loan data* and show the returned *prediction result* to users.
 
 
 ## Final Results
