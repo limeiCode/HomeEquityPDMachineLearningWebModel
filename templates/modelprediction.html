@@ -29,14 +29,14 @@
                 <div class="col-md-offset-2 col-md-8 ">
                     <div class="row">
                         <div class="col-md-3">    
-                            <br>          
+                                     
                             <img style="margin-left:200px;" class=" rounded-circle mx-auto" src="{{ url_for('static', filename='images/img2.jpg')}}" alt="image" >	
                         </div>
-                        <br><br>
+                        
                         <div class="row" style="font-size:large;">                                 
                         </div>                 
                         <div class="row" style="font-size:xx-large;margin-left:50px;">
-                            <br>
+                             
                             Home Equity Loan PD Machine Learning Model     
                         </div>                 
                     </div>
@@ -47,26 +47,26 @@
                 <div class="col-md-offset-2 col-md-8 ">
                     <form method="POST" action="/predictonesample"  role="form", name="petform">
                         <div class="form-group">
-                            <label style="margin-left:10px;">Number of delinquent credit lines</label>
+                            <label style="margin-left:10px;font-size:large;">Number of delinquent credit lines</label>
                             <!-- <input type="number" class="form-control" id="input1" name="delinquentcreditlinescount" placeholder=""  value="" step="0.00000001" min="0" max="100"> -->
                             <input type="number" class="form-control" id="input1" name="delinquentcreditlinescount" placeholder=""  value="{{form_data.delinquentcreditlinescount}}" step="0.00000001" min="0" max="100">
-                            <label style="margin-left:10px;">Number of major derogatory reports</label>
+                            <label style="margin-left:10px;font-size:large;">Number of major derogatory reports</label>
                             <input type="number" class="form-control" id="input2" name="derogatoryreportscount" placeholder=""  value="{{form_data.derogatoryreportscount}}" step="0.00000001" min="0" max="100">
-                            <label style="margin-left:10px;">Number of recent credit inquiries</label>
+                            <label style="margin-left:10px;font-size:large;">Number of recent credit inquiries</label>
                             <input type="number" class="form-control" id="input3" name="recentcreditinquirycount" placeholder=""  value="{{form_data.recentcreditinquirycount}}" step="0.00000001" min="0" max="100">
-                            <label style="margin-left:10px;">Debt-to-income ratio</label>
+                            <label style="margin-left:10px; font-size:large;">Debt-to-income ratio</label>
                             <input type="number" class="form-control" id="input4" name="debttoincomeratio" placeholder=""  value="{{form_data.debttoincomeratio}}" step="0.00000001" min="0" max="1000">
-                            <label style="margin-left:10px;">Number of credit lines</label>
+                            <label style="margin-left:10px;font-size:large;">Number of credit lines</label>
                             <input type="number" class="form-control" id="input5" name="creditlinecount" placeholder=""  value="{{form_data.creditlinecount}}" step="0.00000001" min="0" max="1000">
-                            <label style="margin-left:10px;">Value of current property</label>
+                            <label style="margin-left:10px;font-size:large;">Value of current property</label>
                             <input type="number" class="form-control" id="input6" name="currentpropertyvalue" placeholder=""  value="{{form_data.currentpropertyvalue}}" step="0.00000001" min="0" max="10000000">
-                            <label style="margin-left:10px;">Amount due on existing mortgage</label>
+                            <label style="margin-left:10px;font-size:large;">Amount due on existing mortgage</label>
                             <input type="number" class="form-control" id="input7" name="mortgageamountdue" placeholder=""  value="{{form_data.mortgageamountdue}}" step="0.00000001" min="0" max="100000000">
-                            <label style="margin-left:10px;">Years at present job</label>
+                            <label style="margin-left:10px;font-size:large;">Years at present job</label>
                             <input type="number" class="form-control" id="input8" name="yearsatpresentjob" placeholder=""  value="{{form_data.yearsatpresentjob}}" step="0.00000001" min="0" max="100">
                             <br>
                             <!-- <select name="Occupations" size="5" multiple> -->
-                            <label style="margin-left:10px;">Occupational categories</label>
+                            <label style="margin-left:10px;font-size:large;">Occupational categories</label>
                             <select name="occupations" >
                                 <option disabled selected value> -- select an option -- </option>
                                 <option value="Sales" {% if form_data.occupations == "Sales" %} selected {% endif %}> Sales </option>
@@ -76,7 +76,7 @@
                                 <option value="Self" {% if form_data.occupations == "Self" %} selected {% endif %}> Self </option>                              
                             </select>
                              
-                            <label style="margin-left:50px;" >Apply Loan Reason</label>                            
+                            <label style="margin-left:50px;font-size:large;" >Apply Loan Reason</label>                            
                             <select name="applyloanreasons" >
                                 <option disabled selected value> -- select an option -- </option>
                                 <option value="Debt Consolidation" {% if form_data.applyloanreasons == "Debt Consolidation" %} selected {% endif %}> Debt Consolidation </option>
@@ -84,9 +84,9 @@
                              </select>
                         </div>
                         <br>
-                        <button style="margin-left:10px;" id="predict-btn" type="submit" class="btn btn-default">Predict</button>
-                        <label style="margin-left:50px; color:rgb(23, 0, 128)"> Prediction Result: </label>
-                        <label style="margin-left:25px; color:rgb(23, 44, 235)" id="result"> {{prediction}}  </label>
+                        <button style="margin-left:10px;font-size:large;" id="predict-btn" type="submit" class="btn btn-default">Predict</button>
+                        <label style="margin-left:50px;font-size:large; color:rgb(23, 0, 128)"> Prediction Result: </label>
+                        <label style="margin-left:25px; font-size:large;color:rgb(23, 44, 235)" id="result"> {{prediction}}  </label>
                         <label style="margin-left:25px; color:#fa0828" id="msg"> {{msg}}  </label>
                         <br> <br>
                     

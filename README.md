@@ -6,7 +6,7 @@ This project using **Python** language developed three **Machine Learning** mode
 
 - - -
 
-![AmazonReview.jpg](static/images/img3.png)
+![MachinLearning.jpg](static/images/img3.jpg)
 
 - - -
 
