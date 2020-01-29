@@ -1,56 +1,37 @@
 
 
+# Home Equity PD Machine Learning Web Model
 
-# Home Equity Loan PD model
-
-   < In Development > 
-
-This project used <span style="color:purple;">**Machine Learning, Flask, HTML, CSS, Bootstrap**</span> to predict Home Equity Loan's probability of default. After user input data user will seee the perdiction result by rendering the templates with the model prediction result from running the machine learning model on server which uses <span style="color:purple;">**Jinja Template**</span> library on a HTML page. 
+This project using **Python** language developed three **Machine Learning** models *Logistic Regression*, *Support Vector Machine* for Classification and *Deep Learning* and used the ensemble method to predict a Home Equity Loan is default or not. Then developed a **Flask** full stack *web application* for the model deployment. After the user input the loan data an *API Call* for prediction was sent to the server and the server by running the machine learning model got predictin result then rendered a **Jinja Template**</span> with the result to the user.
 
 - - -
 
-## Data Set
+![AmazonReview.jpg](static/images/img3.png)
 
-The data set reports characteristics and delinquency information for 5,960 home equity loans. 
+- - -
 
-A home equity loan is a loan where the obligor uses the equity of his or her home as the underlying collateral. The data set has the following characteristics:
 
-◾ BAD: 1 = applicant defaulted on loan or seriously delinquent; 0 = applicant paid loan
+## Data Source
 
-◾ LOAN: Amount of the loan request
+The Home Equity Loan data is from  [**Home Equity Loan Dataset**](http://www.creditriskanalytics.net/datasets-private2.html).
 
-◾ MORTDUE: Amount due on existing mortgage
+This data set reports characteristics and delinquency information for 5,960 home equity loans. 
 
-◾ VALUE: Value of current property
-
-◾ REASON: DebtCon = debt consolidation; HomeImp = home improvement
-
-◾ JOB: Occupational categories
-
-◾ YOJ: Years at present job
-
-◾ DEROG: Number of major derogatory reports
-
-◾ DELINQ: Number of delinquent credit lines
-
-◾ CLAGE: Age of oldest credit line in months
-
-◾ NINQ: Number of recent credit inquiries
-
-◾ CLNO: Number of credit lines
-
-◾ DEBTINC: Debt-to-income ratio
+A home equity loan is a loan where the obligor uses the equity of his or her home as the underlying collateral. 
 
 
 ## Technologies Used
 
-*  **Bootstrap Table** is used to set the layout of the webpage and it can makes a *Responsive Tables* by using `table-responsive` class. It scrolls horizontally up to small devices (under 768px) and when viewing on anything larger than 768px wide no any difference.
+* Python web framework **Flask** and it's extensions **Render_Template** are used to render templates with specific data by using Jinja template library back to user.
 
-* Python data manipulation and analysis library **Pandas** is used for importing table data from a webpage adn convert the data to a HTML table string. 
+* Python machine learning algrithems  **Logistic Regression**, **Support Vector Machine** for Classification and **Deep Learning** are used.
 
-* Python web framework **Flask** and it's extensions **Render_Template** and **Redirect** are used to establish database connection,  to render templates with specific data by using Jinja template library, redirect route back to home page.
+* After **Data Preprocessing** process **Feature Selection** is done by using `Correlation Matrix` which keep top 15 features highly correlated to the target variable and these 15 features are less correclated to each other. 
 
-* Python machine learning algrithems  **Logistic Regression** and **SVM** are used.
+* **Hyperparameters Tunning** is done by using `GridSearchCV`. It allows to combine an estimator with a grid search preamble to tune hyper-parameters. The method picks the optimal parameter from the grid search and uses it with the estimator selected by the user. 
+
+*  The **Ensemble** method is used for doing **Model Prediction**. it is a meta-algorithms that combine several machine learning techniques into one predictive model in order to decrease `variance` (bagging), `bias` (boosting), or improve predictions (stacking).
+
 
 ## Project Files:
 
@@ -62,13 +43,13 @@ A home equity loan is a loan where the obligor uses the equity of his or her hom
 
 * **modelprediction.html**: It is the page accept user's input and show the predictio result.
 
+
 ## Final Results
 
 By sending requests from **Brower** to the **Flask Server** can get below results: 
 
 - - -
 
-
-
+![result_1.png](static/images/MLModelRun.gif)
 
 - - -
