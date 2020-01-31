@@ -59,6 +59,18 @@ def predictioninput():
         "yearsatpresentjob":"",
         "applyloanreasons":"",
         "occupations":""  } 
+
+
+    # form_data = { "delinquentcreditlinescount":0, 
+    #     "derogatoryreportscount":0,  
+    #     "recentcreditinquirycount" :0, 
+    #     "debttoincomeratio":0,
+    #     "creditlinecount":0,
+    #     "currentpropertyvalue" :0,
+    #     "mortgageamountdue":0,
+    #     "yearsatpresentjob":0,
+    #     "applyloanreasons":"",
+    #     "occupations":""  } 
     
     if request.method =="POST":
         form_data = request.form
@@ -71,7 +83,7 @@ def predictioninput():
         creditlinecount = float(form_data["creditlinecount"])
         currentpropertyvalue = float(form_data["currentpropertyvalue"]) 
         mortgageamountdue = float(form_data["mortgageamountdue"])
-        yearsatpresentjob = float(form_data["yearsatpresentjob"])  
+        yearsatpresentjob = (form_data["yearsatpresentjob"])  
 
         occupation = form_data["occupations"]
         occupation_Other = 0
@@ -123,7 +135,7 @@ def predictioninput():
         test_array = np.asarray(test_inputs, dtype=np.float32)
 
         # 2) MinMaxScaler(): dummied fields + other integer fields    
-        X_train = pd.read_csv("data\HomeEquityLoans_X_train.csv")   
+        X_train = pd.read_csv("data/HomeEquityLoans_X_train.csv")   
         X_scaler = MinMaxScaler().fit(X_train)
         test_array_scaled = X_scaler.transform(test_array)
 
