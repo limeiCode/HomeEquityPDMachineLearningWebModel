@@ -43,28 +43,29 @@
                 <div class="col-md-offset-2 col-md-8 ">
                     <form method="POST" action="/predictonesample"  role="form", name="petform">
                         <div class="form-group">
-                            <label style="margin-left:10px;margin-top:1px; margin-bottom:1px;font-size:large;">Number of delinquent credit lines</label>
+                            <label style="margin-left:10px;margin-top:1px; margin-bottom:1px;font-size:large;">Number of Delinquent Credit Lines</label>
                             <!-- <input type="number" class="form-control" id="input1" name="delinquentcreditlinescount" placeholder=""  value="" step="0.00000001" min="0" max="100"> -->
                             <input type="number" class="form-control" id="input1" name="delinquentcreditlinescount" placeholder=""  value="{{form_data.delinquentcreditlinescount}}" step="0.00000001" min="0" max="100">
-                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Number of major derogatory reports</label>
+                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Number of Major Derogatory Reports</label>
                             <input type="number" class="form-control" id="input2" name="derogatoryreportscount" placeholder=""  value="{{form_data.derogatoryreportscount}}" step="0.00000001" min="0" max="100">
-                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Number of recent credit inquiries</label>
+                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Number of Recent Credit Inquiries</label>
                             <input type="number" class="form-control" id="input3" name="recentcreditinquirycount" placeholder=""  value="{{form_data.recentcreditinquirycount}}" step="0.00000001" min="0" max="100">
-                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Debt-to-income ratio</label>
+                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Debt-To-Income Ratio</label>
                             <input type="number" class="form-control" id="input4" name="debttoincomeratio" placeholder=""  value="{{form_data.debttoincomeratio}}" step="0.00000001" min="0" max="1000">
-                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Number of credit lines</label>
+                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Number of Credit Lines</label>
                             <input type="number" class="form-control" id="input5" name="creditlinecount" placeholder=""  value="{{form_data.creditlinecount}}" step="0.00000001" min="0" max="1000">
-                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Value of current property</label>
+                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Value of Current Property</label>
                             <input type="number" class="form-control" id="input6" name="currentpropertyvalue" placeholder=""  value="{{form_data.currentpropertyvalue}}" step="0.00000001" min="0" max="10000000">
-                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Amount due on existing mortgage</label>
+                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Amount Due on Existing Mortgage</label>
                             <input type="number" class="form-control" id="input7" name="mortgageamountdue" placeholder=""  value="{{form_data.mortgageamountdue}}" step="0.00000001" min="0" max="100000000">
-                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Years at present job</label>
+                            <label style="margin-left:10px;margin-top:10px;margin-bottom:1px;font-size:large;">Years at Present Job</label>
                             <input type="number" class="form-control" id="input8" name="yearsatpresentjob" placeholder=""  value="{{form_data.yearsatpresentjob}}" step="0.00000001" min="0" max="100">
                             <br>
                             <!-- <select name="Occupations" size="5" multiple> -->
-                            <label style="margin-left:10px;margin-top:1px;margin-bottom:1px;font-size:large;">Occupational categories</label>
+                            <label style="margin-left:10px;margin-top:1px;margin-bottom:1px;font-size:large;">Occupational Categories</label>
                             <select name="occupations" >
-                                <option disabled selected value> -- select an option -- </option>
+                                <!-- <option disabled selected value> -- select an option -- </option> -->
+                                <option value=""></option>
                                 <option value="Sales" {% if form_data.occupations == "Sales" %} selected {% endif %}> Sales </option>
                                 <option value="ProfExe" {% if form_data.occupations == "ProfExe" %} selected {% endif %}> ProfExe </option>
                                 <option value="Manager" {% if form_data.occupations == "Manager" %} selected {% endif %}> Manager </option>
@@ -74,7 +75,8 @@
                              
                             <label style="margin-left:50px;margin-top:1px;margin-bottom:1px;font-size:large;" >Apply Loan Reason</label>                            
                             <select name="applyloanreasons" >
-                                <option disabled selected value> -- select an option -- </option>
+                                <!-- <option disabled selected value> -- select an option -- </option> -->
+                                <option value=""></option>
                                 <option value="Debt Consolidation" {% if form_data.applyloanreasons == "Debt Consolidation" %} selected {% endif %}> Debt Consolidation </option>
                                 <option value="Home Improvement" {% if form_data.applyloanreasons == "Home Improvement" %} selected {% endif %}> Home Improvement </option>
                              </select>
